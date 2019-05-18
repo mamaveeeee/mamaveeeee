@@ -1,0 +1,111 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+    body {
+        padding-bottom: 20px;
+    }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="intro" class="jumbotron inview">
+        <div class="container">
+            <h2>רשימת מצרכים ה'2</h2>
+            <h2><span class="theTitle"></span></h2>
+            <p>בחרו מה אתם רוצים להביא</p>
+        </div>
+    </div>
+    <div id="loading" class="inview">
+        <div class="container">
+            <h3>טוען נתונים ...</h3>
+        </div>
+    </div>
+    </div>
+    <div id="login">
+        <div class="container">
+            <h3>1. בחרו שם משפחה</h3>
+            <div id="families"></div>
+        </div>
+    </div>
+    <div id="identity" class="jumbotron">
+        <span class="glyphicon glyphicon-user"></span> משפחת <span class="loggedInFamily"></span>
+        <a href="#" id="logout"> אופס, זה לא אנחנו</a>
+    </div>
+    <div id="ptor" class="alert alert-success" role="alert">
+        <p>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> ניצלתם! הפעם אתם פטורים מלהביא משהו לאירוע
+        </p>
+    </div>
+    <div id="locked" class="alert alert-danger" role="alert">
+        <p>
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> הבחירה שלכם נקבעה מראש ואינה
+            ניתנת לשינוי
+        </p>
+    </div>
+
+    <div id="fail" class="alert alert-danger" role="alert">
+        <p>
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> אופס! מישהו הקדים אתכם
+        </p>
+        <button type="button" class="btn btn-default continue">המשך</button>
+    </div>
+    <div id="success" class="alert alert-success" role="alert">
+        <p>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> הצלחה! תודה על ההשתתפות
+        </p>
+        <button type="button" class="btn btn-default continue">המשך</button>
+    </div>
+    <div id="foodSelection">
+        <div id="youAreBringing" class="alert alert-info" role="alert">
+            <p>
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> 
+                אתם מביאים <span id="bringing"></span>
+            </p>
+        </div>
+        <div class="container">
+            <h3>2. בחרו מה להביא</h3>
+            <div id="foodlist"></div>
+        </div>
+    </div>
+    <div id="confirm" class="container">
+        <h3>3. אנא אשרו</h3>
+        <p>משפחת <span class="loggedInFamily"></span> מביאה <span class="wantToBring"></span></p>
+        <button id="yes" type="button" class="btn btn-primary">כן</button>
+        <button id="no" type="button" class="btn btn-default">לא</button>
+    </div>
+    <div id="wait" class="container">
+        <h3>4. נא להמתין</h3>
+    </div>
+    <!-- /container -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.7.0/lodash.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

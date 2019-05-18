@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+* {
+    direction: rtl;
+    text-align: right;
+}
+
+body {
+    scroll: auto;
+}
+
+li {
+    cursor: pointer;
+}
+
+li.disabled {
+    text-decoration: line-through;
+}
+
+.family-selected {
+    color: green;
+    padding-right: 20px;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+#login,
+#foodSelection,
+#confirm,
+#wait,
+#identity,
+#success,
+#youAreBringing,
+#ptor,
+#locked,
+#fail {
+    display: none;
+}
+
+.inview {
+    display: block !important;
+    opacity: 1  !important;
+}
+
+.notinview {
+    display: none;
+    opacity: 0;
+}
+
+.alert {
+    margin: 10px;
+}
+
+.alert button {
+    margin-top: 20px;
+}
+
+#bringing , .wantToBring , .loggedInFamily{
+    font-weight: bold;
+}
+
+button {
+    min-width: 100px;
+}
+
+.jumbotron {
+    background: #FFCA28;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+#logout {
+    margin-right: 5px;
+}
